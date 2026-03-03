@@ -3706,13 +3706,13 @@ const SectionView = {
         </div>
       </header>
       <div class="screens-container">
-        <div class="screen" :class="{{active: tab==='quote'}}"><RandomCard :store="store" :config="config" @open-filter="openFilter" /></div>
-        <div class="screen" :class="{{active: tab==='stats'}}"><StatsView :store="store" :config="config" :active="tab==='stats'" @show-item="showItem" /></div>
-        <div class="screen" :class="{{active: tab==='game'}}"><QuizGame :store="store" :config="config" /></div>
-        <div class="screen" :class="{{active: tab==='history'}}"><HistoryList :store="store" :config="config" @show-item="showItem" /></div>
+        <div class="screen" :class="{active: tab==='quote'}"><RandomCard :store="store" :config="config" @open-filter="openFilter" /></div>
+        <div class="screen" :class="{active: tab==='stats'}"><StatsView :store="store" :config="config" :active="tab==='stats'" @show-item="showItem" /></div>
+        <div class="screen" :class="{active: tab==='game'}"><QuizGame :store="store" :config="config" /></div>
+        <div class="screen" :class="{active: tab==='history'}"><HistoryList :store="store" :config="config" @show-item="showItem" /></div>
       </div>
       <nav class="bottom-nav">
-        <button v-for="t in tabs" :key="t.id" class="nav-btn" :class="{{active: tab===t.id}}" @click="setTab(t.id)">
+        <button v-for="t in tabs" :key="t.id" class="nav-btn" :class="{active: tab===t.id}" @click="setTab(t.id)">
           <span class="nav-icon">{{ t.icon }}</span>{{ t.label }}
         </button>
       </nav>
@@ -3876,8 +3876,8 @@ const app = Vue.createApp({
     <div class="app">
       <div class="section-tabs">
         <button v-for="s in SECTIONS" :key="s.id"
-          class="section-tab" :class="{{active: activeSection===s.id}}"
-          :style="activeSection===s.id ? {{borderColor: s.accentColor, color: s.accentColor}} : {{}}"
+          class="section-tab" :class="{active: activeSection===s.id}"
+          :style="activeSection===s.id ? {borderColor: s.accentColor, color: s.accentColor} : {}"
           @click="switchSection(s.id)">
           <span class="section-tab-icon">{{ s.icon }}</span>
           <span class="section-tab-label">{{ s.label }}</span>
