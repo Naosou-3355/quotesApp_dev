@@ -1,0 +1,764 @@
+[
+  {
+    "word": "Abstème",
+    "def": "Qui ne boit pas d’alcool",
+    "cat": "adjectif",
+    "date": "XIXe siècle"
+  },
+  {
+    "word": "Acribie",
+    "def": "Application minutieuse, rigueur extrême",
+    "cat": "nom féminin",
+    "date": "XIXe siècle"
+  },
+  {
+    "word": "Alexithymie",
+    "def": "Difficulté à identifier et exprimer ses émotions",
+    "cat": "nom féminin",
+    "date": "XXe siècle (années 1970)"
+  },
+  {
+    "word": "Anachorète",
+    "def": "Religieux retiré du monde pour mener une vie solitaire",
+    "cat": "nom masculin",
+    "date": "XIIe siècle"
+  },
+  {
+    "word": "Antichambre",
+    "def": "Pièce précédant une chambre ou un salon",
+    "cat": "nom féminin",
+    "date": "XVe siècle"
+  },
+  {
+    "word": "Archerot",
+    "def": "Petit archer, cupidon",
+    "cat": "nom masculin",
+    "date": "XVIe siècle"
+  },
+  {
+    "word": "Atavisme",
+    "def": "Réapparition de caractères ancestraux",
+    "cat": "nom masculin",
+    "date": "XIXe siècle"
+  },
+  {
+    "word": "Autolâtrie",
+    "def": "Adoration de soi-même",
+    "cat": "nom féminin",
+    "date": "XIXe siècle"
+  },
+  {
+    "word": "Baguenauder",
+    "def": "Flâner, perdre son temps à des riens",
+    "cat": "verbe",
+    "date": "XVIe siècle"
+  },
+  {
+    "word": "Basorexie",
+    "def": "Besoin pathologique d’embrasser",
+    "cat": "nom féminin",
+    "date": "XXe siècle"
+  },
+  {
+    "word": "Boustrophédon",
+    "def": "Écriture alternant le sens des lignes",
+    "cat": "nom masculin",
+    "date": "XVIe siècle"
+  },
+  {
+    "word": "Cabinotier",
+    "def": "Ouvrier travaillant chez lui",
+    "cat": "nom masculin",
+    "date": "XVIIIe siècle"
+  },
+  {
+    "word": "Caboulot",
+    "def": "Petit café populaire",
+    "cat": "nom masculin",
+    "date": "XIXe siècle"
+  },
+  {
+    "word": "Capellade",
+    "def": "Coiffure en forme de petite cape",
+    "cat": "nom féminin",
+    "date": "XVIe siècle"
+  },
+  {
+    "word": "Caviarder",
+    "def": "Supprimer des passages d’un texte",
+    "cat": "verbe",
+    "date": "XXe siècle"
+  },
+  {
+    "word": "Cénosillicaphobie",
+    "def": "Peur du verre vide",
+    "cat": "nom féminin",
+    "date": "XXe siècle"
+  },
+  {
+    "word": "Concupiscence",
+    "def": "Désir intense, notamment charnel",
+    "cat": "nom féminin",
+    "date": "XIIe siècle"
+  },
+  {
+    "word": "Croquignolet",
+    "def": "Mignon, délicat",
+    "cat": "adjectif",
+    "date": "XIXe siècle"
+  },
+  {
+    "word": "Discursif",
+    "def": "Qui procède par raisonnement",
+    "cat": "adjectif",
+    "date": "XIVe siècle"
+  },
+  {
+    "word": "Écornifleur",
+    "def": "Personne qui vit aux dépens d’autrui",
+    "cat": "nom masculin",
+    "date": "XIXe siècle"
+  },
+  {
+    "word": "Écornifler",
+    "def": "Obtenir quelque chose sans payer",
+    "cat": "verbe",
+    "date": "XIXe siècle"
+  },
+  {
+    "word": "Ergophobie",
+    "def": "Peur du travail",
+    "cat": "nom féminin",
+    "date": "XXe siècle"
+  },
+  {
+    "word": "Ersatz",
+    "def": "Produit de remplacement, succédané",
+    "cat": "nom masculin",
+    "date": "XXe siècle (emprunt allemand)"
+  },
+  {
+    "word": "Faribole",
+    "def": "Propos sans importance",
+    "cat": "nom féminin",
+    "date": "XVIIe siècle"
+  },
+  {
+    "word": "Fourbir",
+    "def": "Nettoyer, polir (armes, objets)",
+    "cat": "verbe",
+    "date": "XIIe siècle"
+  },
+  {
+    "word": "Gaudriole",
+    "def": "Plaisanterie grivoise",
+    "cat": "nom féminin",
+    "date": "XVIIe siècle"
+  },
+  {
+    "word": "Gouaille",
+    "def": "Manière railleuse et populaire de parler",
+    "cat": "nom féminin",
+    "date": "XIXe siècle"
+  },
+  {
+    "word": "Histrion",
+    "def": "Comédien affecté, personne qui joue la comédie",
+    "cat": "nom masculin",
+    "date": "XVIe siècle"
+  },
+  {
+    "word": "Infatuer",
+    "def": "Rendre excessivement satisfait de soi",
+    "cat": "verbe",
+    "date": "XVIe siècle"
+  },
+  {
+    "word": "Insculper",
+    "def": "Graver en creux",
+    "cat": "verbe",
+    "date": "XVe siècle"
+  },
+  {
+    "word": "Jactance",
+    "def": "Attitude fanfaronne",
+    "cat": "nom féminin",
+    "date": "XVIe siècle"
+  },
+  {
+    "word": "Jubjoter",
+    "def": "Parler d’une voix tremblante",
+    "cat": "verbe",
+    "date": "XIXe siècle"
+  },
+  {
+    "word": "Kampfzwerg",
+    "def": "Nain batailleur (emprunt germanique rare)",
+    "cat": "nom masculin",
+    "date": "XXe siècle"
+  },
+  {
+    "word": "Magnum Opus",
+    "def": "Œuvre majeure d’un auteur",
+    "cat": "locution nominale",
+    "date": "XIXe siècle"
+  },
+  {
+    "word": "Marivauder",
+    "def": "User d’un langage précieux et galant",
+    "cat": "verbe",
+    "date": "XVIIIe siècle"
+  },
+  {
+    "word": "Messeoir",
+    "def": "Ne pas convenir",
+    "cat": "verbe impersonnel",
+    "date": "XIIe siècle"
+  },
+  {
+    "word": "Munificence",
+    "def": "Grande générosité",
+    "cat": "nom féminin",
+    "date": "XIVe siècle"
+  },
+  {
+    "word": "Nychtémère",
+    "def": "Espace de vingt-quatre heures",
+    "cat": "nom masculin",
+    "date": "XVIe siècle"
+  },
+  {
+    "word": "Pandiculation",
+    "def": "Étirement involontaire du corps",
+    "cat": "nom féminin",
+    "date": "XIXe siècle"
+  },
+  {
+    "word": "Parangonage",
+    "def": "Action de comparer pour établir une supériorité",
+    "cat": "nom masculin",
+    "date": "XVIe siècle"
+  },
+  {
+    "word": "Paronomase",
+    "def": "Figure de style rapprochant des mots de sonorité voisine",
+    "cat": "nom féminin",
+    "date": "XVIe siècle"
+  },
+  {
+    "word": "Parvenu",
+    "def": "Personne arrivée rapidement à une situation élevée",
+    "cat": "nom masculin",
+    "date": "XVIIe siècle"
+  },
+  {
+    "word": "Philtrum",
+    "def": "Sillon vertical entre le nez et la lèvre supérieure",
+    "cat": "nom masculin",
+    "date": "XIXe siècle"
+  },
+  {
+    "word": "Poliorcétique",
+    "def": "Art d’assiéger les villes",
+    "cat": "nom féminin",
+    "date": "XVIe siècle"
+  },
+  {
+    "word": "Prolixe",
+    "def": "Trop abondant en paroles",
+    "cat": "adjectif",
+    "date": "XIVe siècle"
+  },
+  {
+    "word": "Putatif",
+    "def": "Supposé, réputé tel",
+    "cat": "adjectif",
+    "date": "XIVe siècle"
+  },
+  {
+    "word": "Raghoïdes",
+    "def": "Qui présente des fentes irrégulières",
+    "cat": "adjectif",
+    "date": "XIXe siècle"
+  },
+  {
+    "word": "Sénescence",
+    "def": "Vieillissement naturel des tissus",
+    "cat": "nom féminin",
+    "date": "XIXe siècle"
+  },
+  {
+    "word": "Sérendipité",
+    "def": "Faculté de faire par hasard une découverte utile",
+    "cat": "nom féminin",
+    "date": "XXe siècle"
+  },
+  {
+    "word": "Stipendier",
+    "def": "Payer pour obtenir un service intéressé",
+    "cat": "verbe",
+    "date": "XVIe siècle"
+  },
+  {
+    "word": "Supercoquentieux",
+    "def": "Excessivement vaniteux",
+    "cat": "adjectif",
+    "date": "XVIIe siècle"
+  },
+  {
+    "word": "Syzygie",
+    "def": "Alignement de trois astres",
+    "cat": "nom féminin",
+    "date": "XVIe siècle"
+  },
+  {
+    "word": "Tintinnabuler",
+    "def": "Produire un son clair et répété",
+    "cat": "verbe",
+    "date": "XIXe siècle"
+  },
+  {
+    "word": "Truculent",
+    "def": "Qui s’exprime avec verve et vigueur",
+    "cat": "adjectif",
+    "date": "XVIe siècle"
+  },
+  {
+    "word": "Truisme",
+    "def": "Vérité évidente",
+    "cat": "nom masculin",
+    "date": "XVIIIe siècle"
+  },
+  {
+    "word": "Velléité",
+    "def": "Volonté faible et passagère",
+    "cat": "nom féminin",
+    "date": "XVIIe siècle"
+  },
+  {
+    "word": "Vilipender",
+    "def": "Déprécier avec mépris",
+    "cat": "verbe",
+    "date": "XVIe siècle"
+  },
+  {
+    "word": "Xyloglotte",
+    "def": "Qui parle une langue de bois",
+    "cat": "adjectif",
+    "date": "XXe siècle"
+  },
+  {
+    "word": "Zakouski",
+    "def": "Hors-d’œuvre russe servi avec des boissons",
+    "cat": "nom masculin",
+    "date": "XXe siècle"
+  },
+  {
+    "word": "Zinzolin",
+    "def": "Violet rougeâtre",
+    "cat": "adjectif et nom masculin",
+    "date": "XVIe siècle"
+  },
+  {
+    "word": "Turpitude",
+    "def": "Bassesse morale, caractère honteux",
+    "cat": "nom féminin",
+    "date": "XIIIe siècle"
+  },
+  {
+    "word": "Ampélographie",
+    "def": "Science de description et d’identification des cépages",
+    "cat": "nom féminin",
+    "date": "XIXe siècle"
+  },
+  {
+    "word": "Zortzico",
+    "def": "Danse et air populaires basques à cinq temps",
+    "cat": "nom masculin",
+    "date": "XIXe siècle"
+  },
+  {
+    "word": "Sporadique",
+    "def": "Qui se produit isolément, de façon irrégulière",
+    "cat": "adjectif",
+    "date": "XVIIIe siècle"
+  },
+  {
+    "word": "Albédo",
+    "def": "Pouvoir réfléchissant d’une surface ou d’un astre",
+    "cat": "nom masculin",
+    "date": "XVIIIe siècle"
+  },
+  {
+    "word": "Sac baisenville",
+    "def": "Sac de voyage contenant des effets personnels",
+    "cat": "nom masculin",
+    "date": "XVIIe siècle"
+  },
+  {
+    "word": "As nauseam",
+    "def": "Jusqu’à la nausée, jusqu’à l’écœurement",
+    "cat": "locution adverbiale",
+    "date": "XIXe siècle"
+  },
+  {
+    "word": "Aporie",
+    "def": "Difficulté logique sans issue apparente",
+    "cat": "nom féminin",
+    "date": "XVIe siècle"
+  },
+  {
+    "word": "Autotélique",
+    "def": "Qui a sa fin en soi-même",
+    "cat": "adjectif",
+    "date": "XXe siècle"
+  },
+  {
+    "word": "Rififi",
+    "def": "Querelle bruyante",
+    "cat": "nom masculin",
+    "date": "XIXe siècle"
+  },
+  {
+    "word": "S’arc-bouter",
+    "def": "S’appuyer fortement pour résister",
+    "cat": "verbe pronominal",
+    "date": "XVIe siècle"
+  },
+  {
+    "word": "Poplité",
+    "def": "Relatif au creux du genou",
+    "cat": "adjectif",
+    "date": "XVIe siècle"
+  },
+  {
+    "word": "Galéjade",
+    "def": "Propos excessif ou vantardise plaisante",
+    "cat": "nom féminin",
+    "date": "XVIIIe siècle"
+  },
+  {
+    "word": "Dabesse",
+    "def": "Femme (argot ancien)",
+    "cat": "nom féminin",
+    "date": "XIXe siècle"
+  },
+  {
+    "word": "Dabicule",
+    "def": "Homme (argot ancien)",
+    "cat": "nom masculin",
+    "date": "XIXe siècle"
+  },
+  {
+    "word": "Obliquer",
+    "def": "Dévier de la ligne droite",
+    "cat": "verbe",
+    "date": "XIVe siècle"
+  },
+  {
+    "word": "Patachon",
+    "def": "Homme grossier aimant boire et manger",
+    "cat": "nom masculin",
+    "date": "XVIIe siècle"
+  },
+  {
+    "word": "Daguerréotype",
+    "def": "Procédé photographique sur plaque métallique",
+    "cat": "nom masculin",
+    "date": "XIXe siècle (1839)"
+  },
+  {
+    "word": "Scabreux",
+    "def": "Délicat ou choquant moralement",
+    "cat": "adjectif",
+    "date": "XIVe siècle"
+  },
+  {
+    "word": "Arsouiller",
+    "def": "Boire avec excès",
+    "cat": "verbe",
+    "date": "XIXe siècle"
+  },
+  {
+    "word": "Antienne",
+    "def": "Phrase ou propos répété",
+    "cat": "nom féminin",
+    "date": "XIIe siècle"
+  },
+  {
+    "word": "Badinerie",
+    "def": "Plaisanterie légère",
+    "cat": "nom féminin",
+    "date": "XVIIe siècle"
+  },
+  {
+    "word": "Évanescent",
+    "def": "Qui disparaît peu à peu",
+    "cat": "adjectif",
+    "date": "XVIIe siècle"
+  },
+  {
+    "word": "Polysémique",
+    "def": "Qui possède plusieurs sens",
+    "cat": "adjectif",
+    "date": "XXe siècle"
+  },
+  {
+    "word": "Celtibère",
+    "def": "Relatif aux anciens peuples celtes d’Espagne",
+    "cat": "nom et adjectif",
+    "date": "XVIe siècle"
+  },
+  {
+    "word": "Altier",
+    "def": "Fièrement hautain",
+    "cat": "adjectif",
+    "date": "XIIe siècle"
+  },
+  {
+    "word": "Frichti",
+    "def": "Repas simple et improvisé",
+    "cat": "nom masculin",
+    "date": "XIXe siècle"
+  },
+  {
+    "word": "Embrouillamini",
+    "def": "Grande confusion",
+    "cat": "nom masculin",
+    "date": "XIXe siècle"
+  },
+  {
+    "word": "Grossium",
+    "def": "Langage grossier",
+    "cat": "nom masculin",
+    "date": "XIXe siècle"
+  },
+  {
+    "word": "Ukiyo",
+    "def": "Monde flottant, monde éphémère des plaisirs",
+    "cat": "nom masculin",
+    "date": "XIXe siècle"
+  },
+  {
+    "word": "Apotropaïque",
+    "def": "Qui écarte le mauvais sort",
+    "cat": "adjectif",
+    "date": "XIXe siècle"
+  },
+  {
+    "word": "Éristique",
+    "def": "Art de la controverse",
+    "cat": "adjectif et nom féminin",
+    "date": "XVIe siècle"
+  },
+  {
+    "word": "Démiurge",
+    "def": "Principe créateur organisateur du monde",
+    "cat": "nom masculin",
+    "date": "XVIe siècle"
+  },
+  {
+    "word": "Anfractuosité",
+    "def": "Cavité sinueuse",
+    "cat": "nom féminin",
+    "date": "XIVe siècle"
+  },
+  {
+    "word": "Boustrophédon",
+    "def": "Mode d’écriture alternant le sens des lignes",
+    "cat": "nom masculin",
+    "date": "XVIe siècle"
+  },
+  {
+    "word": "Replet",
+    "def": "Gras, bien en chair",
+    "cat": "adjectif",
+    "date": "XIIIe siècle"
+  },
+  {
+    "word": "Trublion",
+    "def": "Personne qui sème le trouble",
+    "cat": "nom masculin",
+    "date": "XIXe siècle"
+  },
+  {
+    "word": "Haranguer",
+    "def": "Adresser un discours solennel",
+    "cat": "verbe",
+    "date": "XIIe siècle"
+  },
+  {
+    "word": "Resucée",
+    "def": "Idée répétée, déjà dite",
+    "cat": "nom féminin",
+    "date": "XVIIe siècle"
+  },
+  {
+    "word": "Persifleur",
+    "def": "Personne qui se moque avec ironie",
+    "cat": "nom masculin",
+    "date": "XVIIIe siècle"
+  },
+  {
+    "word": "Soliloquer",
+    "def": "Se parler à soi-même à haute voix",
+    "cat": "verbe",
+    "date": "XVIe siècle"
+  },
+  {
+    "word": "Orbicole",
+    "def": "Qui habite la Terre",
+    "cat": "adjectif et nom",
+    "date": "XVIIe siècle"
+  },
+  {
+    "word": "Oblatif",
+    "def": "Relatif au don de soi",
+    "cat": "adjectif",
+    "date": "XIXe siècle"
+  },
+  {
+    "word": "Bibliotaphe",
+    "def": "Personne qui accumule des livres sans les lire",
+    "cat": "nom masculin",
+    "date": "XIXe siècle"
+  },
+  {
+    "word": "Compendieusement",
+    "def": "D’une manière concise",
+    "cat": "adverbe",
+    "date": "XVIe siècle"
+  },
+  {
+    "word": "Pétuner",
+    "def": "Fumer du tabac",
+    "cat": "verbe",
+    "date": "XVIe siècle"
+  },
+  {
+    "word": "Hubris",
+    "def": "Démesure orgueilleuse",
+    "cat": "nom féminin",
+    "date": "XXe siècle"
+  },
+  {
+    "word": "Sganarelliser",
+    "def": "Se comporter de manière fanfaronne",
+    "cat": "verbe",
+    "date": "XIXe siècle"
+  },
+  {
+    "word": "Gastrolâtre",
+    "def": "Personne qui voue un culte à la gourmandise",
+    "cat": "nom masculin",
+    "date": "XIXe siècle"
+  },
+  {
+    "word": "Siccité",
+    "def": "Sécheresse, aridité",
+    "cat": "nom féminin",
+    "date": "XVIe siècle"
+  },
+  {
+    "word": "Hommasse",
+    "def": "Femme d’allure masculine",
+    "cat": "nom féminin",
+    "date": "XIXe siècle"
+  },
+  {
+    "word": "Conventicule",
+    "def": "Assemblée secrète",
+    "cat": "nom masculin",
+    "date": "XVIe siècle"
+  },
+  {
+    "word": "Confabuler",
+    "def": "Inventer des faits imaginaires",
+    "cat": "verbe",
+    "date": "XIXe siècle"
+  },
+  {
+    "word": "Coruscation",
+    "def": "Éclat bref et vif",
+    "cat": "nom féminin",
+    "date": "XVIIe siècle"
+  },
+  {
+    "word": "Pusillanime",
+    "def": "Qui manque de courage",
+    "cat": "adjectif",
+    "date": "XIVe siècle"
+  },
+  {
+    "word": "Enchifrené",
+    "def": "Enrhumé, au nez bouché",
+    "cat": "adjectif",
+    "date": "XVIe siècle"
+  },
+  {
+    "word": "Rebuffade",
+    "def": "Refus brusque et peu aimable",
+    "cat": "nom féminin",
+    "date": "XVIIe siècle"
+  },
+  {
+    "word": "Mirliflore",
+    "def": "Jeune homme prétentieux et affecté",
+    "cat": "nom masculin",
+    "date": "XVIIe siècle"
+  },
+  {
+    "word": "Infundibuliforme",
+    "def": "En forme d’entonnoir",
+    "cat": "adjectif",
+    "date": "XIXe siècle"
+  },
+  {
+    "word": "Colliger",
+    "def": "Recueillir et réunir",
+    "cat": "verbe",
+    "date": "XIVe siècle"
+  },
+  {
+    "word": "Avunculaire",
+    "def": "Bienveillant comme un oncle",
+    "cat": "adjectif",
+    "date": "XVIIe siècle"
+  },
+  {
+    "word": "Apocryphe",
+    "def": "D’authenticité douteuse",
+    "cat": "adjectif",
+    "date": "XIIIe siècle"
+  },
+  {
+    "word": "Maritorne",
+    "def": "Femme de service maladroite",
+    "cat": "nom féminin",
+    "date": "XVIIe siècle"
+  },
+  {
+    "word": "Éphélide",
+    "def": "Tache de rousseur",
+    "cat": "nom féminin",
+    "date": "XVIIIe siècle"
+  },
+  {
+    "word": "Mézigue",
+    "def": "Moi-même (argot)",
+    "cat": "pronom tonique",
+    "date": "XIXe siècle"
+  },
+  {
+    "word": "Contrit",
+    "def": "Profondément repentant",
+    "cat": "adjectif",
+    "date": "XIIe siècle"
+  },
+  {
+    "word": "Gaudrioles",
+    "def": "Propos grivois",
+    "cat": "nom féminin pluriel",
+    "date": "XVIIe siècle"
+  }
+]
