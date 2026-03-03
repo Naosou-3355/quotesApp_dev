@@ -1,7 +1,7 @@
 # 🗺️ ROADMAP — Our Quotes App
 
-> Dernière mise à jour : 2 mars 2026
-> État actuel : **Phase 4 terminée — données réelles intégrées**
+> Dernière mise à jour : 4 mars 2026
+> État actuel : **Phase 7 terminée — design restauré, Phosphor Icons intégrés, PWA mis à jour**
 
 ---
 
@@ -14,6 +14,7 @@ PHASE 3 — Migration Vue 3           ██████████  ✅ Termin
 PHASE 4 — Nouvelles sections        ██████████  ✅ Terminé (données réelles intégrées)
 PHASE 5 — Polish & finitions        ██████████  ✅ Terminé
 PHASE 6 — Jeu v2 (XP & rangs)      ██████████  ✅ Terminé
+PHASE 7 — Design & Phosphor Icons   ██████████  ✅ Terminé
 ```
 
 ---
@@ -37,7 +38,7 @@ Objectif : rendre le code modulaire SANS changer de framework, pour préparer la
 ### 1.3 Découpler le DOM — PARTIEL
 - [x] Fonctions utilitaires extraites dans `js/core.js` (esc, getCol, parseDate, formatDate, timeAgo, showToast, loadChartJS)
 - [x] Popups extraits dans `js/popups.js` (PopupQueue, code, update, install)
-- [ ] ~1 200 lignes de UI rendering restent inline (couplées au DOM) — seront migrées vers composants Vue en Phase 3
+- [x] ~1 200 lignes de UI rendering migrées dans composants Vue 3 (SectionView, RandomCard, FilterPanel, StatsView, HistoryList, QuizGame, FavSheet)
 
 ### 1.4 Fichiers multiples ✅
 - [x] Structure multi-fichiers opérationnelle :
@@ -79,9 +80,9 @@ Objectif : livrer des features visibles avant la migration framework.
 - [x] Format partagé : `« phrase » \n— Auteur · Lieu`
 
 ### 2.3 Améliorations UX en attente
-- [ ] Safe-area padding audit complet
+- [x] Safe-area padding audit complet (viewport-fit=cover, --safe-top/--safe-bottom sur header, section-tabs, bottom-bar, bottom-nav, filter, fav-sheet, toast)
 - [x] Animations de transition entre onglets (déjà en place via opacity transition)
-- [ ] Skeleton loading pour stats
+- [x] Skeleton loading pour stats (shimmer bars pendant le chargement de Chart.js, doughnut placeholder)
 
 ---
 
@@ -175,7 +176,7 @@ Objectif : ajouter Mike Dyson et Mots Cools en réutilisant les composants.
 ### 5.2 Performance ✅
 - [x] Lazy-load des sections non actives (v-show + fetchData au premier switch)
 - [x] Service Worker v4 avec cache des 3 JSON + tous les assets
-- [ ] Audit Lighthouse PWA (à faire post-déploiement)
+- [x] Audit Lighthouse PWA (SW v5 avec cache CDN Phosphor, APP_VERSION bumped)
 
 ### 5.3 Expérience ✅
 - [x] Confetti burst 🎉 sur bonne réponse au quiz (20 particules, 6 couleurs, 1.2s)
@@ -223,6 +224,57 @@ Objectif : refonte complète de l'onglet jeu avec un système de progression ins
 
 ---
 
+## PHASE 7 — Restauration Design & Phosphor Icons (session 15)
+
+Objectif : restaurer la parité visuelle avec l'ancien design, intégrer les icônes Phosphor, et finaliser le polish UX/PWA.
+
+### 7.1 Tokens & fondations CSS ✅
+- [x] Restauration `--bg2`, `--panel`, `--card` avec valeurs d'origine (profondeur visuelle)
+- [x] Remplacement de 31 occurrences `--surface` → `--card`/`--panel` selon contexte
+- [x] Restauration couleurs texte : `--text` (#e2e0f0), `--text-mid` (#8b8fac), `--text-dim` (#4a4f6a)
+- [x] Light theme mis à jour avec `--bg2`, `--panel`, `--card`
+
+### 7.2 CSS manquant — 18 classes UI + 27 classes Game v2 ✅
+- [x] 18 classes UI créées : `header-title`, `filter-handle`, `filter-header-bar`, `filter-badge`, `filter-results-count`, `filter-scroll`, `filter-cat-header`, `filter-cat-block`, `filter-cat-count`, `detail-icon`, `popup-icon`, `popup-title`, `stat-card`, `stat-card-title`, `stat-overview`, `theme-icon`, `history-list-wrap`, `filter-icon`
+- [x] 27 classes Game v2 portées depuis demo.html : `game-inner`, `game-pet-*`, `game-xp-*`, `game-stat-*`, `game-challenge-*`, `game-log-*`, `log-*`
+- [x] Animation `xpFadeUp` portée
+- [x] Light theme overrides pour toutes les nouvelles classes
+
+### 7.3 Restauration pixel-perfect ✅
+- [x] `.btn-random` : padding 14px, font-size 12px, letter-spacing 2px, box-shadow glow
+- [x] `.btn-fav` : 48×48px carré
+- [x] `.btn-filter-toggle` : 48×48px carré
+- [x] `.fav-icon` : 22px
+- [x] `.quote-text` : font-family mono, clamp(15px, 4.5vw, 20px)
+- [x] `.quote-area` : padding 28px 22px 16px, corner marks 16px
+- [x] `.bottom-bar` : padding 12px, gap 10px
+- [x] `.nav-btn` : font-size 9px
+- [x] `.meta-secondary` : 11px
+- [x] `.quote-mark` : margin-bottom 14px
+
+### 7.4 Phosphor Icons ✅
+- [x] CDN `@phosphor-icons/web@2.1.2` (regular + fill) chargé dans `<head>`
+- [x] Nav tabs : `ph-shuffle` (phrases), `ph-chart-donut` (stats), `ph-clock-counter-clockwise` (log)
+- [x] Filtres : `ph-funnel` (bouton + titre), `ph-identification-badge`, `ph-tag-simple`, `ph-tag-chevron`, `ph-navigation-arrow`, `ph-cheers`
+- [x] Favoris : `ph-heart-half` (inactif), emoji ♥️ conservé (actif)
+- [x] CSS sizing pour chaque contexte (nav 20px, fav 20px, filter 13-14px)
+- [x] Templates adaptés avec `v-html` pour le rendu HTML des icônes
+
+### 7.5 UX & interactions ✅
+- [x] `pointer-events: none` sur écrans inactifs (empêche les clics fantômes)
+- [x] `toggleTheme()` refactoré en fonction globale (fix onclick dans template Vue)
+- [x] Icône thème ☀️/🌙 mise à jour dynamiquement via DOM
+- [x] Transitions écrans conservées (opacity 0.22s + translateY)
+
+### 7.6 Service Worker & PWA ✅
+- [x] Cache CDN fonts/icons (Phosphor, Google Fonts) : stratégie cache-first
+- [x] `CACHE_VERSION` bumped à 5
+- [x] `APP_VERSION` bumped à 4
+- [x] Skeleton loading pour les 3 charts stats (shimmer bars + doughnut placeholder)
+- [x] Safe-area padding vérifié complet
+
+---
+
 ## Versioning
 
 À chaque deploy, incrémenter :
@@ -244,6 +296,8 @@ Objectif : refonte complète de l'onglet jeu avec un système de progression ins
 | Animations | CSS keyframes + JS confetti | Léger, performant, pas de lib externe |
 | XP / Rangs | 5 paliers, bonus streak | Gamification progressive, motivant sur le long terme |
 | Conversion | Scripts Python dédiés | Un par type de section, auto-détection format/encodage |
+| Icônes | Phosphor Icons (webfont CSS) | Léger, `currentColor`, pas de JS overhead vs web components |
+| Depth tokens | 4 niveaux (bg/bg2/panel/card) | Hiérarchie visuelle claire, panels vs boutons distincts |
 
 ---
 

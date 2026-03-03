@@ -2,7 +2,7 @@
 // SERVICE WORKER — QuoteApp
 // ═══════════════════════════════════════════════
 // INCREMENT this on every deploy to trigger update:
-const CACHE_VERSION = 4;
+const CACHE_VERSION = 5;
 const CACHE_NAME = 'quoteapp-v' + CACHE_VERSION;
 
 // Core assets to pre-cache on install
@@ -13,6 +13,13 @@ const PRECACHE = [
   './data-mikedyson.json',
   './data-motscools.json',
   './manifest.json'
+];
+
+// CDN domains to cache (fonts, icons)
+const CACHE_CDN = [
+  'fonts.googleapis.com',
+  'fonts.gstatic.com',
+  'cdn.jsdelivr.net'
 ];
 
 // ── INSTALL: pre-cache core assets ──
@@ -40,6 +47,23 @@ self.addEventListener('activate', (e) => {
 self.addEventListener('fetch', (e) => {
   const req = e.request;
   if (req.method !== 'GET' || !req.url.startsWith('http')) return;
+
+  // CDN fonts & icons: cache-first, long duration
+  const url = new URL(req.url);
+  if (CACHE_CDN.some(d => url.hostname.includes(d))) {
+    e.respondWith(
+      caches.open(CACHE_NAME).then(cache =>
+        cache.match(req).then(cached => {
+          if (cached) return cached;
+          return fetch(req).then(res => {
+            if (res.ok) cache.put(req, res.clone());
+            return res;
+          });
+        })
+      )
+    );
+    return;
+  }
 
   // Navigation (HTML): network-first, cache fallback
   if (req.mode === 'navigate') {

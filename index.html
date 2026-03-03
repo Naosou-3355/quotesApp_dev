@@ -3849,15 +3849,28 @@ const StatsView = {
       <!-- Charts -->
       <div class="stat-card">
         <div class="stat-card-title">👤 Top auteurs</div>
-        <div class="chart-wrap"><canvas :id="'chart-authors-' + config.id"></canvas></div>
+        <div v-if="loading" class="chart-wrap" style="display:flex;flex-direction:column;gap:8px;padding:20px 0">
+          <div class="skeleton-bar" style="width:90%;height:12px;border-radius:6px"></div>
+          <div class="skeleton-bar" style="width:70%;height:12px;border-radius:6px"></div>
+          <div class="skeleton-bar" style="width:50%;height:12px;border-radius:6px"></div>
+        </div>
+        <div v-else class="chart-wrap"><canvas :id="'chart-authors-' + config.id"></canvas></div>
       </div>
       <div class="stat-card" v-if="config.colMap.mainCat">
         <div class="stat-card-title">🏷 Catégories</div>
-        <div class="chart-wrap" style="max-height:250px"><canvas :id="'chart-cats-' + config.id"></canvas></div>
+        <div v-if="loading" class="chart-wrap" style="display:flex;align-items:center;justify-content:center;padding:30px 0">
+          <div class="skeleton-bar" style="width:120px;height:120px;border-radius:50%"></div>
+        </div>
+        <div v-else class="chart-wrap" style="max-height:250px"><canvas :id="'chart-cats-' + config.id"></canvas></div>
       </div>
       <div class="stat-card">
         <div class="stat-card-title">📈 Timeline</div>
-        <div class="chart-wrap"><canvas :id="'chart-timeline-' + config.id"></canvas></div>
+        <div v-if="loading" class="chart-wrap" style="display:flex;flex-direction:column;gap:8px;padding:20px 0">
+          <div class="skeleton-bar" style="width:80%;height:12px;border-radius:6px"></div>
+          <div class="skeleton-bar" style="width:60%;height:12px;border-radius:6px"></div>
+          <div class="skeleton-bar" style="width:40%;height:12px;border-radius:6px"></div>
+        </div>
+        <div v-else class="chart-wrap"><canvas :id="'chart-timeline-' + config.id"></canvas></div>
       </div>
     </div>
   `
@@ -4000,7 +4013,7 @@ const app = Vue.createApp({
     const codeDigits = ref(['','','','','','']);
     const codeError = ref('');
     const installNoRemind = ref(false);
-    const APP_VERSION = '3';
+    const APP_VERSION = '4';
     const ACCESS_CODE = '751101';
 
     function queuePopup(id) { popupQueue.push(id); if (!activePopup.value) nextPopup(); }
