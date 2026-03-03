@@ -13,6 +13,8 @@
   <title>Our Quotes</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/fill/style.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.5.13/vue.global.prod.min.js"></script>
   <script>
     if (typeof Vue === 'undefined') {
@@ -23,8 +25,11 @@
 /* ── DESIGN TOKENS ── */
 :root {
   --bg:          #0d0f1a;
+  --bg2:         #111320;
+  --panel:       #141728;
+  --card:        #1a1e30;
   --surface:     #161a2e;
-  --border:      #272c46;
+  --border:      #252a42;
   --border-glow: #7c6af744;
 
   --accent:      #7c6af7;
@@ -35,9 +40,9 @@
   --pink:        #f472b6;
   --cyan:        #22d3ee;
 
-  --text:        #e8e6f4;
-  --text-mid:    #9599b8;
-  --text-dim:    #6d72a0;
+  --text:        #e2e0f0;
+  --text-mid:    #8b8fac;
+  --text-dim:    #4a4f6a;
 
   --font-mono:   'JetBrains Mono', 'Courier New', monospace;
   --font-body:   'DM Sans', system-ui, sans-serif;
@@ -142,7 +147,7 @@ body::before {
   padding: 7px 11px;
   border-radius: var(--radius-sm);
   border: 1px solid var(--border);
-  background: var(--surface);
+  background: var(--card);
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
   transition: border-color 0.15s;
@@ -168,7 +173,7 @@ body::before {
   width: 34px; height: 34px;
   border-radius: var(--radius-sm);
   border: 1px solid var(--border);
-  background: var(--surface);
+  background: var(--card);
   color: var(--text-mid);
   cursor: pointer;
   display: flex; align-items: center; justify-content: center;
@@ -265,7 +270,7 @@ body::before {
   display: grid;
   grid-template-rows: 1fr auto;
   gap: 0;
-  padding: 40px 28px 24px;
+  padding: 28px 22px 16px;
   min-height: 0;
   position: relative;
 }
@@ -279,8 +284,8 @@ body::before {
   border-style: solid;
   pointer-events: none;
 }
-.quote-area::before { top: 20px; left: 18px; border-width: 2px 0 0 2px; }
-.quote-area::after  { bottom: 20px; right: 18px; border-width: 0 2px 2px 0; }
+.quote-area::before { top: 16px; left: 16px; border-width: 2px 0 0 2px; }
+.quote-area::after  { bottom: 16px; right: 16px; border-width: 0 2px 2px 0; }
 
 /* Zone haute : numéro de phrase (fixe) */
 .quote-line-num {
@@ -304,16 +309,16 @@ body::before {
   font-size: 48px;
   line-height: 0.7;
   color: var(--accent-dim);
-  margin-bottom: 18px;
+  margin-bottom: 14px;
   display: block;
   font-weight: 700;
   flex-shrink: 0;
 }
 
 .quote-text {
-  font-family: var(--font-body);
-  font-size: clamp(16px, 4.5vw, 21px);
-  line-height: 1.75;
+  font-family: var(--font-mono);
+  font-size: clamp(15px, 4.5vw, 20px);
+  line-height: 1.7;
   color: var(--text);
   font-weight: 300;
   font-style: italic;
@@ -370,7 +375,7 @@ body::before {
 .meta-author::before { content: '> '; color: #ffffff; }
 
 .meta-secondary {
-  font-size: 12px;
+  font-size: 11px;
   color: var(--text-dim);
   display: flex;
   gap: 12px;
@@ -412,7 +417,7 @@ body::before {
   padding: 5px 10px;
   border-radius: var(--radius-sm);
   border: 1px solid var(--border);
-  background: var(--surface);
+  background: var(--card);
   font-size: 12px;
   font-weight: 400;
   font-family: var(--font-mono);
@@ -510,9 +515,9 @@ body::before {
 
 /* ── BOTTOM ACTION BAR ── */
 .bottom-bar {
-  padding: 10px 16px calc(var(--safe-bottom) + 10px);
+  padding: 12px 16px calc(var(--safe-bottom) + 12px);
   display: flex;
-  gap: 8px;
+  gap: 10px;
   align-items: center;
   border-top: 1px solid var(--border);
   background: rgba(13,15,26,0.95);
@@ -522,23 +527,23 @@ body::before {
 
 .btn-random {
   flex: 1;
-  padding: 0 14px;
-  height: 40px;
+  padding: 14px;
   border-radius: var(--radius);
   border: 1px solid var(--accent);
   background: var(--accent-dim);
   color: var(--accent);
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
-  letter-spacing: 1.5px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: 8px;
   transition: all 0.15s;
+  box-shadow: var(--accent-glow);
   -webkit-tap-highlight-color: transparent;
 }
 .btn-random::before { content: ''; }
@@ -548,28 +553,35 @@ body::before {
   color: var(--bg);
 }
 
-.btn-fav, .btn-filter-toggle {
-  height: 40px;
+.btn-fav {
+  width: 48px; height: 48px;
   border-radius: var(--radius);
   border: 1px solid var(--border);
-  background: var(--surface);
-  color: var(--text-mid);
+  background: var(--card);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5px;
   transition: all 0.15s;
   -webkit-tap-highlight-color: transparent;
   flex-shrink: 0;
-  font-family: var(--font-mono);
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  padding: 0 14px;
 }
-.btn-fav .fav-icon { font-size: 14px; line-height: 1; display: inline-block; }
+.btn-filter-toggle {
+  width: 48px; height: 48px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text-mid);
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+  -webkit-tap-highlight-color: transparent;
+  flex-shrink: 0;
+}
+.btn-fav .fav-icon { font-size: 22px; line-height: 1; }
 .btn-fav.pop .fav-icon {
   animation: favPop 0.4s cubic-bezier(0.17, 0.89, 0.32, 1.49);
 }
@@ -671,7 +683,7 @@ body::before {
 .filter-menu {
   width: 100%;
   max-width: 480px;
-  background: var(--surface);
+  background: var(--panel);
   border: 1px solid var(--border);
   border-bottom: none;
   border-radius: 18px 18px 0 0;
@@ -750,7 +762,7 @@ body::before {
   align-items: center;
   justify-content: space-between;
   padding: 11px 14px;
-  background: var(--surface);
+  background: var(--panel);
   border: none;
   border-radius: var(--radius-sm);
   color: var(--text-mid);
@@ -787,7 +799,7 @@ body::before {
   flex-wrap: wrap;
   gap: 6px;
   padding: 0 12px;
-  background: var(--surface);
+  background: var(--panel);
   border-radius: 0 0 var(--radius-sm) var(--radius-sm);
 }
 .filter-collapsible.open {
@@ -929,7 +941,7 @@ body::before {
 }
 
 .stats-card {
-  background: var(--surface);
+  background: var(--panel);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 18px;
@@ -1045,7 +1057,7 @@ canvas.chart-canvas { max-height: 220px; }
 }
 
 .history-item {
-  background: var(--surface);
+  background: var(--card);
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   padding: 12px 16px;
@@ -1134,7 +1146,7 @@ canvas.chart-canvas { max-height: 220px; }
 #screen-game { padding: 0; gap: 0; display: flex; flex-direction: column; }
 .game-score-card {
   display: flex; justify-content: space-around; align-items: center;
-  background: var(--surface); border: 1px solid var(--border);
+  background: var(--card); border: 1px solid var(--border);
   border-radius: var(--radius-sm); margin: 12px 18px 0; padding: 10px 8px;
 }
 .game-score-item { text-align: center; }
@@ -1201,7 +1213,7 @@ canvas.chart-canvas { max-height: 220px; }
   background: rgba(13,15,26,0.92); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
 }
 .game-mode-btn {
-  flex: 1; padding: 10px 12px; border: 1px solid var(--border); background: var(--surface);
+  flex: 1; padding: 10px 12px; border: 1px solid var(--border); background: var(--card);
   color: var(--text-dim); font-family: var(--font-mono); font-size: 11px;
   cursor: pointer; transition: all 0.15s; -webkit-tap-highlight-color: transparent;
 }
@@ -1214,7 +1226,7 @@ canvas.chart-canvas { max-height: 220px; }
   width: 44px; height: 44px;
   border-radius: var(--radius);
   border: 1px solid var(--border);
-  background: var(--surface);
+  background: var(--card);
   cursor: pointer;
   display: flex; align-items: center; justify-content: center;
   font-size: 18px;
@@ -1246,7 +1258,7 @@ canvas.chart-canvas { max-height: 220px; }
   cursor: pointer;
   color: var(--text-dim);
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 9px;
   font-weight: 500;
   letter-spacing: 1.5px;
   text-transform: uppercase;
@@ -1306,7 +1318,7 @@ canvas.chart-canvas { max-height: 220px; }
   width: 100%;
   max-width: 480px;
   margin: 0 auto;
-  background: var(--surface);
+  background: var(--card);
   border: 1px solid var(--border);
   border-bottom: none;
   border-radius: 18px 18px 0 0;
@@ -1359,7 +1371,7 @@ canvas.chart-canvas { max-height: 220px; }
   padding: 12px 14px;
   border-radius: var(--radius-sm);
   border: 1px solid var(--border);
-  background: var(--surface);
+  background: var(--card);
   font-size: 13px;
   font-family: var(--font-body);
   font-style: italic;
@@ -1408,7 +1420,7 @@ canvas.chart-canvas { max-height: 220px; }
 .skeleton-bar {
   height: 14px;
   border-radius: 6px;
-  background: linear-gradient(90deg, var(--border) 25%, var(--surface) 50%, var(--border) 75%);
+  background: linear-gradient(90deg, var(--border) 25%, var(--card) 50%, var(--border) 75%);
   background-size: 200% 100%;
   animation: skeletonShimmer 1.5s ease infinite;
 }
@@ -1470,7 +1482,7 @@ canvas.chart-canvas { max-height: 220px; }
   pointer-events: auto;
 }
 .popup-card {
-  background: var(--surface);
+  background: var(--panel);
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   padding: 18px 18px 14px;
@@ -1739,7 +1751,7 @@ canvas.chart-canvas { max-height: 220px; }
       justify-content: center; flex: 1; gap: 12px; padding: 40px;
     }
     .skeleton-bar {
-      height: 12px; border-radius: 6px; background: var(--surface);
+      height: 12px; border-radius: 6px; background: var(--card);
       animation: skeletonPulse 1.5s ease-in-out infinite;
     }
     .skeleton-bar:nth-child(1) { width: 80%; }
@@ -1753,7 +1765,7 @@ canvas.chart-canvas { max-height: 220px; }
     /* ── THEME TOGGLE ── */
     .btn-theme {
       width: 32px; height: 32px; border-radius: 50%;
-      border: 1px solid var(--border); background: var(--surface);
+      border: 1px solid var(--border); background: var(--card);
       cursor: pointer; display: flex; align-items: center; justify-content: center;
       font-size: 14px; flex-shrink: 0;
       -webkit-tap-highlight-color: transparent;
@@ -1761,9 +1773,187 @@ canvas.chart-canvas { max-height: 220px; }
     }
     .btn-theme:active { transform: scale(0.88); }
 
+    /* ── MISSING UI CLASSES ── */
+    .header-title {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+    .theme-icon { font-size: 14px; line-height: 1; }
+    .filter-handle {
+      width: 36px; height: 4px; border-radius: 2px;
+      background: var(--border); margin: 10px auto 0; cursor: pointer;
+    }
+    .filter-header-bar {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 18px 12px; border-bottom: 1px solid var(--border); flex-shrink: 0;
+    }
+    .filter-badge {
+      padding: 5px 10px; border-radius: var(--radius-sm);
+      border: 1px solid var(--border); background: transparent;
+      font-family: var(--font-mono); font-size: 10px; color: var(--accent);
+      cursor: pointer; letter-spacing: 0.5px;
+    }
+    .filter-results-count {
+      font-family: var(--font-mono); font-size: 11px; color: var(--text-dim);
+      padding: 8px 18px 0; letter-spacing: 0.5px;
+    }
+    .filter-scroll { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; padding: 0 18px 18px; }
+    .filter-icon { font-size: 14px; }
+    /* Phosphor icon sizing */
+    .nav-icon i.ph { font-size: 20px; vertical-align: middle; }
+    .fav-icon i.ph { font-size: 20px; }
+    .btn-fav-header-icon i.ph { font-size: 15px; }
+    .btn-filter-toggle i.ph { font-size: 20px; }
+    .filter-title i.ph { font-size: 14px; vertical-align: -1px; }
+    .filter-cat-toggle i.ph { font-size: 13px; vertical-align: -1px; }
+    .empty-icon i.ph { font-size: 32px; }
+    .filter-cat-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 10px 0; cursor: pointer; -webkit-tap-highlight-color: transparent;
+    }
+    .filter-cat-block { margin-bottom: 4px; }
+    .filter-cat-count {
+      font-size: 10px; color: var(--text-dim); font-family: var(--font-mono); margin-left: 6px;
+    }
+    .detail-icon { font-size: 14px; flex-shrink: 0; }
+    .popup-icon { font-size: 40px; text-align: center; margin-bottom: 10px; }
+    .popup-title {
+      font-family: var(--font-mono); font-size: 14px; font-weight: 700;
+      color: var(--text); text-align: center; margin-bottom: 6px;
+    }
+    .stat-card {
+      background: var(--panel); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 16px; margin-bottom: 12px;
+    }
+    .stat-card-title {
+      font-family: var(--font-mono); font-size: 11px; font-weight: 600;
+      letter-spacing: 2px; text-transform: uppercase; color: var(--text-dim);
+      margin-bottom: 12px;
+    }
+    .stat-card-title::before { content: '// '; color: var(--border); }
+    .stat-overview {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 14px;
+    }
+    .history-list-wrap {
+      padding: 18px; display: flex; flex-direction: column; gap: 10px; flex: 1; overflow-y: auto;
+    }
+
+    /* ── GAME V2: XP / CODEPET / LOG ── */
+    .game-inner { padding: 14px 16px 24px; display: flex; flex-direction: column; gap: 14px; }
+    .game-pet-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 20px; padding: 24px 20px 20px; text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .game-pet-glow {
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -60%);
+      width: 180px; height: 180px;
+      background: radial-gradient(circle, rgba(124,106,247,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .game-pet-emoji {
+      font-size: 56px; display: block; position: relative; z-index: 1;
+      transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1);
+    }
+    .game-pet-emoji.bounce { transform: scale(1.25) rotate(-5deg); }
+    .game-xp-pop {
+      position: absolute; top: 14px; right: 16px;
+      background: var(--accent); color: #fff;
+      border-radius: 20px; padding: 3px 12px;
+      font-family: var(--font-mono); font-size: 12px; font-weight: 700;
+      z-index: 10; animation: xpFadeUp 1.4s ease forwards;
+    }
+    .game-rank-name {
+      font-family: var(--font-mono); font-size: 16px; font-weight: 700;
+      color: var(--accent); margin-top: 10px; letter-spacing: 0.5px;
+    }
+    .game-rank-desc {
+      font-family: var(--font-mono); font-size: 11px; color: var(--text-dim); margin-top: 3px;
+    }
+    .game-xp-section { margin-top: 14px; }
+    .game-xp-labels {
+      display: flex; justify-content: space-between;
+      font-family: var(--font-mono); font-size: 10px; color: var(--text-dim); margin-bottom: 5px;
+    }
+    .game-xp-bar {
+      height: 7px; background: rgba(255,255,255,0.06); border-radius: 4px; overflow: hidden;
+    }
+    .game-xp-fill {
+      height: 100%; border-radius: 4px;
+      background: linear-gradient(90deg, var(--accent), #f472b6);
+      transition: width 0.6s cubic-bezier(0.34,1.56,0.64,1);
+    }
+    .game-xp-percent {
+      font-family: var(--font-mono); font-size: 10px; color: #4ade80;
+      text-align: center; margin-top: 5px;
+    }
+    .game-stats-row { display: flex; gap: 10px; }
+    .game-stat-card {
+      flex: 1; background: var(--card); border: 1px solid var(--border);
+      border-radius: 14px; padding: 12px 8px; text-align: center;
+    }
+    .game-stat-val {
+      font-family: var(--font-mono); font-size: 20px; font-weight: 700; color: var(--text);
+    }
+    .game-stat-label {
+      font-family: var(--font-mono); font-size: 9px; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--text-dim); margin-top: 2px;
+    }
+    .game-challenge-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 20px; padding: 20px; position: relative;
+    }
+    .game-challenge-label {
+      font-family: var(--font-mono); font-size: 10px; letter-spacing: 3px;
+      text-transform: uppercase; color: var(--text-dim); margin-bottom: 14px;
+    }
+    .game-challenge-quote {
+      font-family: var(--font-body); font-size: 16px; font-weight: 300;
+      font-style: italic; color: var(--text); line-height: 1.65; margin-bottom: 16px;
+    }
+    .game-challenge-quote .game-blank {
+      color: var(--accent); border-bottom: 2px dashed var(--accent); padding: 0 6px;
+    }
+    .game-log-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 20px; padding: 16px 18px;
+    }
+    .game-log-title {
+      font-family: var(--font-mono); font-size: 10px; letter-spacing: 3px;
+      text-transform: uppercase; color: var(--text-dim); margin-bottom: 10px;
+    }
+    .game-log-empty {
+      font-family: var(--font-mono); font-size: 11px; color: var(--text-dim);
+      text-align: center; padding: 10px 0;
+    }
+    .game-log-item {
+      display: flex; align-items: center; gap: 8px;
+      padding: 7px 0; border-bottom: 1px solid var(--border);
+      font-family: var(--font-mono); font-size: 11px; color: var(--text);
+    }
+    .game-log-item:last-child { border-bottom: none; }
+    .game-log-item .log-icon { font-size: 14px; flex-shrink: 0; }
+    .game-log-item .log-author {
+      color: var(--text-mid); flex: 1;
+      overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    }
+    .game-log-item .log-xp { color: var(--accent); font-weight: 700; flex-shrink: 0; }
+    .game-log-item .log-time { color: var(--text-dim); font-size: 10px; flex-shrink: 0; }
+
+    @keyframes xpFadeUp {
+      0% { opacity: 1; transform: translateY(0); }
+      70% { opacity: 1; transform: translateY(-20px); }
+      100% { opacity: 0; transform: translateY(-30px); }
+    }
+
     /* ── LIGHT THEME ── */
     :root.light {
-      --bg: #f5f5f7; --surface: #ffffff; --border: #d2d2d7;
+      --bg: #f5f5f7; --bg2: #f0f0f2; --panel: #ffffff; --card: #ffffff; --surface: #ffffff; --border: #d2d2d7;
       --text: #1d1d1f; --text-mid: #6e6e73; --text-dim: #aeaeb2;
       --ink-light: rgba(0,0,0,0.03); --border-glow: rgba(124,106,247,0.15);
     }
@@ -1789,6 +1979,12 @@ canvas.chart-canvas { max-height: 220px; }
     :root.light .toast { background: var(--surface); color: var(--text); box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
     :root.light .fav-sheet { background: var(--surface); }
     :root.light .onboard-card { background: var(--surface); }
+    :root.light .stat-card { background: var(--card); }
+    :root.light .game-pet-card { background: var(--card); }
+    :root.light .game-stat-card { background: var(--card); }
+    :root.light .game-challenge-card { background: var(--card); }
+    :root.light .game-log-card { background: var(--card); }
+    :root.light .game-xp-bar { background: rgba(0,0,0,0.05); }
 
     /* ── ONBOARDING ── */
     .onboard-overlay {
@@ -2788,11 +2984,11 @@ const SECTIONS = [
       alcohol:['alc','Under alcohol ?'], context:['ctx','Context'], wam:['wam','Si wam, avec qui ?'], volume:['vol','Volume'],
     },
     filters: [
-      { key:'authors', col:'author', label:'👤 Auteur' },
-      { key:'mainCats', col:'mainCat', label:'🏷 Catégorie' },
-      { key:'secondCats', col:'secondCat', label:'🔖 Secondaire' },
-      { key:'locations', col:'location', label:'📍 Lieu' },
-      { key:'alcohol', col:'alcohol', label:'🍺 Alcool' },
+      { key:'authors', col:'author', label:'<i class="ph ph-identification-badge"></i> Auteur' },
+      { key:'mainCats', col:'mainCat', label:'<i class="ph ph-tag-simple"></i> Catégorie' },
+      { key:'secondCats', col:'secondCat', label:'<i class="ph ph-tag-chevron"></i> Secondaire' },
+      { key:'locations', col:'location', label:'<i class="ph ph-navigation-arrow"></i> Lieu' },
+      { key:'alcohol', col:'alcohol', label:'<i class="ph ph-cheers"></i> Alcool' },
       { key:'volumes', col:'volume', label:'📚 Volume' },
     ],
   },
@@ -2804,7 +3000,7 @@ const SECTIONS = [
     },
     labels: { author: 'Réponses', daily: '🎤 Devinette du jour' },
     filters: [
-      { key:'mainCats', col:'mainCat', label:'🏷 Catégorie' },
+      { key:'mainCats', col:'mainCat', label:'<i class="ph ph-tag-simple"></i> Catégorie' },
     ],
   },
   {
@@ -2815,7 +3011,7 @@ const SECTIONS = [
     },
     labels: { author: 'Définitions', daily: '💎 Mot du jour' },
     filters: [
-      { key:'mainCats', col:'mainCat', label:'🏷 Catégorie' },
+      { key:'mainCats', col:'mainCat', label:'<i class="ph ph-tag-simple"></i> Catégorie' },
     ],
   },
 ];
@@ -3059,7 +3255,7 @@ const RandomCard = {
           <div class="chips-row">
             <span v-for="chip in chips" :key="chip.type" 
               :class="['chip-badge', chip.type + '-badge']"
-              @click="chip.type === 'ctx' ? showContext = !showContext : null">
+              @click="chip.type === 'ctx' ? showContext = !showContext : null" style="cursor:pointer">
               {{ chip.icon }} {{ chip.label }}
             </span>
           </div>
@@ -3071,11 +3267,11 @@ const RandomCard = {
     </div>
     <div class="bottom-bar">
       <button class="btn-fav" @click="toggleFav" :title="isFav ? 'Retirer' : 'Ajouter aux favoris'">
-        <span class="fav-icon">{{ isFav ? '♥️' : '📌' }}</span>
+        <span class="fav-icon" v-html="isFav ? '♥️' : '<i class=\'ph ph-heart-half\'></i>'"></span>
       </button>
       <button class="btn-random" @click="nextRandom">{{ config.randomBtnLabel }}</button>
       <button class="btn-share" @click="share" title="Partager">↗</button>
-      <button class="btn-filter-toggle" @click="$emit('open-filter')" title="Filtres"><span class="filter-icon">🔍</span> <span class="filter-label">Filtrer</span></button>
+      <button class="btn-filter-toggle" @click="$emit('open-filter')" title="Filtres"><i class="ph ph-funnel"></i></button>
     </div>
   `
 };
@@ -3392,7 +3588,7 @@ const FilterPanel = {
       <div class="filter-panel" :class="{ open: visible }">
         <div class="filter-handle" @click="close"></div>
         <div class="filter-header-bar">
-          <h3 class="filter-title">🔍 Filtres</h3>
+          <h3 class="filter-title"><i class="ph ph-funnel"></i> Filtres</h3>
           <button class="filter-badge" v-if="filterCount > 0" @click="reset">
             {{ filterCount }} actif{{ filterCount > 1 ? 's' : '' }} — réinitialiser
           </button>
@@ -3407,7 +3603,7 @@ const FilterPanel = {
         <div class="filter-scroll">
           <div v-for="group in filterGroups" :key="group.key" class="filter-cat-block">
             <div class="filter-cat-header" @click="toggleExpand(group.key)">
-              <span>{{ group.label }} <span v-if="group.selected.length" class="filter-cat-count">({{ group.selected.length }})</span></span>
+              <span><span v-html="group.label"></span> <span v-if="group.selected.length" class="filter-cat-count">({{ group.selected.length }})</span></span>
               <span class="filter-cat-arrow" :class="{ expanded: isExpanded(group.key) }">▸</span>
             </div>
             <div class="filter-chips-inner" v-show="isExpanded(group.key)">
@@ -3682,10 +3878,10 @@ const SectionView = {
     const filterOpen = Vue.ref(false);
     const favSheetOpen = Vue.ref(false);
     const tabs = [
-      { id:'quote', icon:'🎲', label:'phrases' },
-      { id:'stats', icon:'📊', label:'stats' },
+      { id:'quote', icon:'<i class="ph ph-shuffle"></i>', label:'phrases' },
+      { id:'stats', icon:'<i class="ph ph-chart-donut"></i>', label:'stats' },
       { id:'game', icon:'🧠', label:'jeu' },
-      { id:'history', icon:'💾', label:'historique' },
+      { id:'history', icon:'<i class="ph ph-clock-counter-clockwise"></i>', label:'log' },
     ];
     const favCount = Vue.computed(() => props.store.favorites.length);
     function setTab(t) { tab.value = t; }
@@ -3700,7 +3896,7 @@ const SectionView = {
         <div class="header-actions">
           <button class="btn-fav-header" @click="favSheetOpen = true">
             <span class="btn-fav-header-label">Mes préfs<span v-if="favCount"> ({{ favCount }})</span></span>
-            <span class="btn-fav-header-icon">🤍</span>
+            <span class="btn-fav-header-icon"><i class="ph ph-heart-half"></i></span>
           </button>
           <button class="btn-theme" onclick="toggleTheme()" title="Thème"><span class="theme-icon">☀️</span></button>
         </div>
@@ -3713,7 +3909,7 @@ const SectionView = {
       </div>
       <nav class="bottom-nav">
         <button v-for="t in tabs" :key="t.id" class="nav-btn" :class="{active: tab===t.id}" @click="setTab(t.id)">
-          <span class="nav-icon">{{ t.icon }}</span>{{ t.label }}
+          <span class="nav-icon" v-html="t.icon"></span>{{ t.label }}
         </button>
       </nav>
       <FilterPanel :store="store" :config="config" :visible="filterOpen" @close="filterOpen = false" />
