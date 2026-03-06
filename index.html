@@ -3230,8 +3230,10 @@ const RandomCard = {
       if (!current.value && props.store.dataLoaded) nextRandom();
     });
 
+    const favIcon = computed(() => isFav.value ? '♥️' : '<i class="ph ph-heart-half"></i>');
+
     return {
-      current, text, author, location, date, isFav, lineNum,
+      current, text, author, location, date, isFav, favIcon, lineNum,
       chips, showContext, contextText, animating,
       nextRandom, toggleFav, share,
     };
@@ -3267,7 +3269,7 @@ const RandomCard = {
     </div>
     <div class="bottom-bar">
       <button class="btn-fav" @click="toggleFav" :title="isFav ? 'Retirer' : 'Ajouter aux favoris'">
-        <span class="fav-icon" v-html="isFav ? '♥️' : '<i class=\'ph ph-heart-half\'></i>'"></span>
+        <span class="fav-icon" v-html="favIcon"></span>
       </button>
       <button class="btn-random" @click="nextRandom">{{ config.randomBtnLabel }}</button>
       <button class="btn-share" @click="share" title="Partager">↗</button>
